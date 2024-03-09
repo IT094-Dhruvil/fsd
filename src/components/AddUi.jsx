@@ -9,6 +9,7 @@ const AddUi = () => {
   const location = useLocation();
   const [uri,setUri]=useState([]);
   const [Tid,setTid]=useState(null);
+  const api='';
   
 
       const [post,setPost] = useState({

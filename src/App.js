@@ -6,6 +6,7 @@ import AboutUi from './components/AboutUi';
 import Teams from './components/Teams';
 import TableUi from './components/TableUi';
 import AddUi from './components/AddUi';
+import ContactUi from './components/ContactUi';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<HomeUi/>}/>
         <Route path='/teams' element={<Teams/>}/>
         <Route path='/about' element={<AboutUi/>}/>
+        <Route path='/contact' element={<ContactUi/>}/>
         <Route path='/table' element={<TableUi/>}/>
         <Route path='/addPlayer' element={<AddUi/>}/>
       
