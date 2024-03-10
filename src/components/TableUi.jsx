@@ -30,6 +30,10 @@ function TableUi() {
        
 
       }
+      function handleUpdate(pId) {
+        
+        navigate(`/updatePlayer/${pId}`);
+    }
 
   return (
     <div className="main-container">
@@ -48,13 +52,14 @@ function TableUi() {
                 <th>SR</th>
                 <th>AVG</th>
                 <th>Wickets</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
               {
                  data.map((player,index)=> {
                       return <tr key={index}>
-                        <td></td>
+                        <td>{player.pid}</td>
                         <td>{player.playerName}</td>
                         <td>{player.matches}</td>
                         <td>{player.runs}</td>
@@ -64,6 +69,7 @@ function TableUi() {
                         <td>{player.sr}</td>
                         <td>{player.avg}</td>
                         <td>{player.wickets}</td>
+                        <td><button onClick={()=>handleUpdate(player.pid)}>Update</button></td>
                       </tr>
 
                  })
