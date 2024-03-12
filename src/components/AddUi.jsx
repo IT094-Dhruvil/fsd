@@ -26,7 +26,7 @@ const AddUi = () => {
        useEffect(()=>{
         if (location.state && location.state.api) {
           const api = location.state.api1;
-          const id = location.state.id1; // Extracting the ID from state
+          const id = location.state.id1;
           setUri(api);
           setTid(id); 
     }},[location]);

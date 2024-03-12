@@ -30,9 +30,9 @@ function TableUi() {
        
 
       }
-      function handleUpdate(pId) {
+      function handleUpdate(pid) {
         
-        navigate(`/updatePlayer/${pId}`);
+        navigate(`/updatePlayer/${pid}`);
     }
 
   return (

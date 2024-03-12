@@ -4,17 +4,19 @@ import './updateui.css'
 import { useParams } from 'react-router-dom';
 
 const UpdateUi = () => {
-    const { pId } = useParams();
+    const { pid } = useParams();
     const [formData, setFormData] = useState({
+        pid: pid,
         playerName: '',
-        matches: '',
-        runs: '',
-        best: '',
-        p50s: '',
-        p100s: '',
-        avg: '',
-        wickets: '',
-        sr: ''
+        matches: null,
+        runs: null,
+        best: null,
+        p50s: null,
+        p100s: null,
+        avg: null,
+        wickets: null,
+        sr: null,
+        
     });
 
     const handleInput = (e) => {
@@ -22,9 +24,9 @@ const UpdateUi = () => {
     };
 
     const handleUpdateSubmit = async (e) => {
-        e.preventDefault();
+        //e.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:8080/api/team/player/${pId}`, formData);
+            const response = await axios.put(`http://localhost:8080/api/team/player/${pid}`, formData);
             console.log(response.data); 
             
         } catch (error) {
@@ -43,6 +45,11 @@ const UpdateUi = () => {
     <div class="form">
     <div class="title">Player Details</div>
     
+    <div class="input-container ic1">
+      <input  name='pid'value={formData.pid} class="input" type="text" />
+      
+      
+    </div>
     <div class="input-container ic1">
       <input  name='playerName' onChange={handleInput} class="input" type="text" placeholder="Player Name" />
       

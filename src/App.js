@@ -20,7 +20,7 @@ function App() {
         <Route path='/contact' element={<ContactUi/>}/>
         <Route path='/table' element={<TableUi/>}/>
         <Route path='/addPlayer' element={<AddUi/>}/>
-        <Route path='/updatePlayer/:pId' element={<UpdateUi/>}/>
+        <Route path='/updatePlayer/:pid' element={<UpdateUi/>}/>
       
         </Routes>
     </div>
