@@ -1,44 +1,53 @@
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-  }
+.Heading{
 
-  footer a {
-    color: #fff;
-    text-decoration: none;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
-  .social-icons {
-    margin-top: 10px;
-  }
+.contact-us {
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  background-color: #e4509781;
+}
 
-  .social-icons a {
-    margin: 0 10px;
-  }
+h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
 
-  .social-icons img {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-  }
+.contact-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
 
-  .email-icon img {
-    width: 25px;
-    height: 20px;
-    vertical-align: middle;
-  }
+.column {
+  /* text-align: left;
+  flex: 1; */
+  margin: 0 10px;
+}
 
-  @media (max-width: 768px) {
-    .social-icons img {
-      width: 25px;
-      height: 25px;
-    }
+.column p {
+  margin: 10px 0;
+}
 
-    .email-icon img {
-      width: 20px;
-      height: 15px;
-    }
-  }
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px; 
+}
+
+.social-icons a {
+  margin-right: 30px; 
+  
+  color: #ef0f0f;
+}
+a{
+  margin: 10px;
+  margin-top: 10px;
+  font-size: 30px;
+}

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './updateui.css'
-import { useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 
 const UpdateUi = () => {
     const { pid } = useParams();
+    const navigate=useNavigate();
     const [formData, setFormData] = useState({
         pid: pid,
         playerName: '',
@@ -27,7 +28,7 @@ const UpdateUi = () => {
         //e.preventDefault();
         try {
             const response = await axios.put(`http://localhost:8080/api/team/player/${pid}`, formData);
-            console.log(response.data); 
+            navigate('/home') 
             
         } catch (error) {
             console.error('Error updating player:', error);
