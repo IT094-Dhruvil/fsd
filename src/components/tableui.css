@@ -9,6 +9,7 @@
   
   .tcontainer {
     position: absolute;
+    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -27,6 +28,9 @@
     padding: 15px;
     background-color: rgba(255,255,255,0.2);
     color: #fff;
+    align-items: center;
+    
+    
   }
   
   th {
@@ -88,13 +92,15 @@
 }
 addbtn button{
   font-size: 16px;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-left: 10px;
   font-family: sans-serif;
   width: 74.78px;
   height: 41.6px;
-  background-color: transparent;
+  background-color: greenyellow;
   border-radius: 5px;
   border: 2px solid black;
+  
     
 }
 addbtn button:hover{
@@ -103,14 +109,17 @@ addbtn button:hover{
     transition: 1s;
 }
 
-td button
-{
-  font-size: 16px;
+td button{
+    
+    
   font-family: sans-serif;
-  width: 74.78px;
-  height: 41.6px;
-  background-color: transparent;
+  width: 90px;
+  height: 40px;
+  background-color:rgb(36, 36, 232);
   border-radius: 5px;
-  border: 2px solid black;
+  color: aliceblue;
+
+    
 }
+
 

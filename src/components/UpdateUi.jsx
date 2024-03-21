@@ -25,15 +25,16 @@ const UpdateUi = () => {
     };
 
     const handleUpdateSubmit = async (e) => {
-        //e.preventDefault();
+        e.preventDefault();
         try {
             const response = await axios.put(`http://localhost:8080/api/team/player/${pid}`, formData);
-            navigate('/home') 
+             
             
         } catch (error) {
             console.error('Error updating player:', error);
             
         }
+        navigate('/home')
     };
 
    

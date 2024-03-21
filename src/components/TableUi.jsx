@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {  NavLink, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import './tableui.css'
+import axios from 'axios';
 
 function TableUi() {
   const location = useLocation();
@@ -34,6 +35,18 @@ function TableUi() {
         
         navigate(`/updatePlayer/${pid}`);
     }
+    function handleDelete(playerId){
+      const apiDelete=`http://localhost:8080/api/team/player/${playerId}`;
+
+      axios.delete(apiDelete)
+      .then(response => { 
+          console.log('Player deleted successfully');
+      })
+      .catch(error => {
+        console.error('Error deleting player:', error);
+      });
+      navigate('/home')
+    }
 
   return (
     <div className="main-container">
@@ -52,7 +65,9 @@ function TableUi() {
                 <th>SR</th>
                 <th>AVG</th>
                 <th>Wickets</th>
-                <th></th>
+                <th>Actions</th>
+                <th>Remove Player</th>
+                
               </tr>
             </thead>
             <tbody>
@@ -70,6 +85,7 @@ function TableUi() {
                         <td>{player.avg}</td>
                         <td>{player.wickets}</td>
                         <td><button onClick={()=>handleUpdate(player.pid)}>Update</button></td>
+                        <td><button onClick={()=>handleDelete(player.pid)}>Delete</button></td>
                       </tr>
 
                  })
