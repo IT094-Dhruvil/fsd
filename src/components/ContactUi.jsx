@@ -3,11 +3,15 @@ import './contactui.css';
 import instagram from './../image/instalogo.png';
 import twitter from './../image/twitterlogo.png';
 import mail from './../image/gmaillogo.png';
+import BG from './../image/contLogo.jpg'
 import { FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
 import './contactui.css'
 const ContactUi = () => {
   return (
    <>
+    <div className='header-cont'>
+      <img src={BG}></img>
+    </div>
     <div className="contact-us">
         <div className='Heading'>
       <h2>Get in Touch</h2>

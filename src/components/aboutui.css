@@ -2,6 +2,7 @@
   box-sizing: border-box;
   background-color: #293ace;
   color: whitesmoke;
+  
 }
 .heading{
   width: 90%;
@@ -29,7 +30,7 @@
   background-color: #4caf50;
 }
 .heading p{
-  font-size: 18px;
+  font-size: 24px;
 
   margin-bottom: 35px;
 
@@ -67,12 +68,12 @@
   
 }
 .about-content h2{
-  font-size: 23px;
+  font-size: 30pxpx;
   margin-bottom: 15px;
   
 }
 .about-content p{
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.5;
   
 }
